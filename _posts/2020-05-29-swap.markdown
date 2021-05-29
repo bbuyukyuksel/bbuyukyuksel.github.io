@@ -1,0 +1,74 @@
+# Copy And Swap Idiom
+
+**Copy and swap idiom, assignment operator** fonksiyonunu daha temiz yazılması için kullanılır.
+
+Copy assignment yazılırken sağladığı iki avantaj vardır.
+
+- Strong Exception guarantee
+- Avoids code duplication
+
+## Strong Exception Guarantee
+
+Önce gerekli allocation işlemini yapar.  Ardından hata oluşmaz ise "**swap**" işlemini yapıyor.
+
+## In A Depth Explanation
+
+```cpp
+#include <iostream>
+#include <cstddef>
+#include <vector>
+
+class MyArray {
+public:
+    MyArray(std::size_t _size) :
+    mSize(_size),
+    ptr(mSize ? new int[mSize] : nullptr) {}
+
+    Myarray(const Myarray& obj) :
+    mSize(obj.mSize),
+    ptr(mSize ? new int[mSize] : nullPtr) {
+        std::copy(other.ptr, other.ptr + mSize, ptr);
+    } 
+
+    MyArray& operator= (const MyArray& obj) {
+        if (this != obj) {
+            delete ptr;
+            mSize = obj.mSize;
+            ptr = mSize ? new int[mSize] : nullptr;
+            std::copy(obj, obj + mSize, ptr);
+        }
+        return *this;
+    }
+
+    ~MyArray() {
+        delete [] ptr;
+    }
+
+private:
+    int *ptr;
+    std::size_t mSize;
+};
+
+int main() {
+}
+```
+
+- **Self Assignment** : Bu durumun çok nadir rastlanılan bir senaryodur. KO içerisinde her defasında self-assignment kontrolünü yapmak gereksiz işlem yükü oluşturacaktır.
+- **Exception Throw :** new operatörü exception throw edebilir. Bu durumda nesne dangling pointer olarak kalacaktır. Tutulması gereken veri kaybolacaktır. Mevcut implementasyon sadece basic exception guarantee sağlamaktadır.  ****
+
+```cpp
+friend void swap(CSArray& first, CSArray& second) {
+        using std::swap;
+        swap(first.mSize, second.mSize);
+        swap(first.ptr, second.ptr);
+    }
+
+    CSArray& operator= (CSArray temp) {
+        swap(*this, temp);
+        return *this;
+    }
+```
+
+## KAYNAK
+
+- [https://stackoverflow.com/questions/3279543/what-is-the-copy-and-swap-idiom](https://stackoverflow.com/questions/3279543/what-is-the-copy-and-swap-idiom)
