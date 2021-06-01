@@ -22,10 +22,10 @@ ___
 - **[Çıktının Formatlanması](#çıktının-formatlanması)**
 - **[Değişkenlerin Kullanımı](#değişkenlerin-kullanımı)**
 - **[Hata Mesajlarının Yakalanması](#hata-mesajlarının-yakalanması)**
-- **Konfigürasyonlar**
-  - Kaynak Kod Tabanlı
-  - Dosya Tabanlı
-- **Üretim Şablonu**
+- **[Konfigürasyonlar](#konfigürasyonlar)**
+  - [Kaynak Kod Tabanlı](#kaynak-kod-tabanlı)
+  - [Dosya Tabanlı](#dosya-tabanlı)
+- **[Üretim Şablonu](#üretim-şablonu)**
 
 ------
 
