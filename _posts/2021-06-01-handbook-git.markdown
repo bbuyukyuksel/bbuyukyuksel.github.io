@@ -7,7 +7,7 @@ lang: tr
 img: git.png
 tags: [Git, Handbook]
 contents: 
-- 'Giriş;giris'
+- 'Giriş;giriş'
 - 'Nedir Bu Kavramlar?;nedir-bu-kavramlar'
 - 'Yardım mı lazım?;yardım-mı-lazım'
 - 'Versiyon Öğrenme;versiyon-öğrenme'
