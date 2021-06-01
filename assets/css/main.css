@@ -70,7 +70,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  margin-top: 5em;
+  margin-bottom: 5em !important;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   /* 1 */
@@ -885,7 +885,7 @@ table tfoot td {
 }
 
 .wrapper {
-  max-width: 1250px;
+  max-width: 1500px;
   position: relative;
 }
 
@@ -1099,6 +1099,26 @@ footer .copyright {
   font-size: 14px;
   text-align: center;
   margin: 0;
+}
+
+.contents-outer {
+  margin-top: 30px;
+  position: relative;
+  overflow: auto;
+}
+
+.fixed {
+  position: fixed;
+}
+
+
+.contents-row {
+  background: linear-gradient(317deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 50%, rgba(255,255,255,0.2) 100%);
+
+
+  color:black;
+  text-decoration: none;
+  width:25%;
 }
 
 .post {

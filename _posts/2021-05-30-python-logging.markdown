@@ -1,10 +1,19 @@
 ---
 layout: post
 title: Python3 - Logging
-date: 2021-06-01 00:00:00 +0300
+date: 2021-05-30 00:00:00 +0300
 description: Python'da logging modülünün kullanımı ve hazır template'inin sunulması amaçlanmaktadır.
+lang: tr
 img: software.jpg
 tags: [Python, Logging]
+contents: 
+- 'Standart Seviyeler;standart-seviyeler'
+- 'Basit Konfigürasyonlar;basit-konfigürasyonlar'
+- 'Çıktının Formatlanması;çıktının-formatlanması'
+- 'Değişkenlerin Kullanımı;değişkenlerin-kullanımı'
+- 'Hata Mesajlarının Yakalanması;hata-mesajlarının-yakalanması'
+- 'Konfigürasyonlar;konfigürasyonlar'
+- 'Üretim Şablonu;üretim-şablonu'
 ---
 
 # Giriş
@@ -12,20 +21,6 @@ tags: [Python, Logging]
 Log'lama yazılım mühendislerinin en iyi debug araç-gereçleri arasında yer almaktadır. Uzun bir süre koşacak kodunuz için *(servis uygulaması olabilir)*  ön görülmeyen durumlarda ki çökmeler veya hataların saptanmasında yardımcı olabilmektedir.
 
 Kısaca log'lamayı, uygulamamızın tuttuğu günlük defterlerine benzetebiliriz. Biraz daha açmak gerekirse, karşılaştığı bütün durumları, durum etiketleriyle birlikte içini bir dosyaya dökmesi olarak betimleyebiliriz.
-
-___
-
-# İçindekiler
-
-- **[Standart Seviyeler](#standart-seviyeler)**
-- **[Basit Konfigürasyonlar](#basit-konfigürasyonlar)**
-- **[Çıktının Formatlanması](#çıktının-formatlanması)**
-- **[Değişkenlerin Kullanımı](#değişkenlerin-kullanımı)**
-- **[Hata Mesajlarının Yakalanması](#hata-mesajlarının-yakalanması)**
-- **[Konfigürasyonlar](#konfigürasyonlar)**
-  - [Kaynak Kod Tabanlı](#kaynak-kod-tabanlı)
-  - [Dosya Tabanlı](#dosya-tabanlı)
-- **[Üretim Şablonu](#üretim-şablonu)**
 
 ------
 
