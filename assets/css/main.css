@@ -70,6 +70,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
+  margin-top: 5em;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   /* 1 */
@@ -446,7 +447,7 @@ template {
 .highlighter-rouge {
   color: #ce887b;
   font-weight: 400;
-  border: 1px solid #607D8B;
+  border: 1px dashed #a97676;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   padding: 0.1rem 0.5rem;
