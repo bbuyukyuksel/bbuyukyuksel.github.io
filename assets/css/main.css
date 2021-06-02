@@ -1500,3 +1500,8 @@ a.newer-posts:hover {
     font-size: 21px;
   }
 }
+
+#search-container{
+  margin-top:5px;
+  color:red;
+}
