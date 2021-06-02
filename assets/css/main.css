@@ -1467,8 +1467,11 @@ a.newer-posts:hover {
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-  .contact-title, .copyright {
+  .contact-title, .copyright{
     display: none;
+  }
+  .contents-outer {
+    display:none;
   }
 }
 
@@ -1499,8 +1502,8 @@ a.newer-posts:hover {
   .post .post-content .post-title a {
     font-size: 21px;
   }
-  .contents-outer{
-    display: none;
+  .contents-outer {
+    display:none;
   }
 }
 #search-container{
