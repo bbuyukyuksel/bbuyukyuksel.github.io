@@ -111,6 +111,7 @@ ___
 - Classification Accuracy
 - Precision
 - Recall
+- F-Measure
 
 ___
 
@@ -142,7 +143,7 @@ Bu sayılar daha sonra aşağıdaki gibi bir tablo veya matris halinde düzenlen
 
 ___
 
-### İki Sınıflı Problemleri Özeldir
+### İki Sınıflı Problemler Özeldir
 
 <img src="/assets/img/post_images/makine-ogrenmesi-metrikleri/02.PNG" />
 
