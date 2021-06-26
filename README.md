@@ -18,7 +18,20 @@ Fork the ``master`` branch and follow the [Jekyll Installation Documentation](ht
   bundle exec jeykll server
   ```
 
-  
+
+
+
+## Creating Contents:
+
+```javascript
+let items = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+for(let i=2; i<items.length; ++i){
+    console.log(`- '${items[i].textContent};${items[i].id}'`)
+}
+```
+
+
 
 
 ## License
