@@ -8,7 +8,34 @@ img: makine-ogrenmesi.jpg
 tags: [Makine Öğrenmesi, Metrikler, Handbook]
 contents: 
 - 'Giriş;giriş'
-
+- 'Tek Sayı Değerlendirme Metriği;tek-sayı-değerlendirme-metriği'
+- 'Confusion Matrix;confusion-matrix'
+- 'Confusion Matrix Nasıl Hesaplanır?;confusion-matrix-nasıl-hesaplanır'
+- 'İki Sınıflı Problemleri Özeldir;i̇ki-sınıflı-problemleri-özeldir'
+- 'İki Sınıf Uygulaması;i̇ki-sınıf-uygulaması'
+- 'Çoklu Sınıf Uygulaması;çoklu-sınıf-uygulaması'
+- 'Classification Accuracy;classification-accuracy'
+- 'Uygulama;uygulama'
+- 'Precision;precision'
+- 'İkili Sınıflandırma için Precision;i̇kili-sınıflandırma-için-precision'
+- 'Uygulama;uygulama-1'
+- 'Çok Sınıflı Sınıflandırma için Precision;çok-sınıflı-sınıflandırma-için-precision'
+- 'Uygulama;uygulama-2'
+- 'Recall;recall'
+- 'İkili Sınıflandırma için Recall;i̇kili-sınıflandırma-için-recall'
+- 'Uygulama;uygulama-3'
+- 'Çok Sınıflı Sınıflandırma için Recall;çok-sınıflı-sınıflandırma-için-recall'
+- 'Uygulama;uygulama-4'
+- 'Dengesiz Sınıflandırma Problemlerinde Precision vs. Recall;dengesiz-sınıflandırma-problemlerinde-precision-vs-recall'
+- 'Dengesiz Sınıflandırma Problemleri için F-Measure;dengesiz-sınıflandırma-problemleri-için-f-measure'
+- 'Uygulama;uygulama-5'
+- 'Geliştirme ve Test Kümesini Ayarlama;geliştirme-ve-test-kümesini-ayarlama'
+- 'Veri Kümesini Bölme;veri-kümesini-bölme'
+- 'Avoidable Bias;avoidable-bias'
+- '(avoidable) Bias ve Variance Azaltmak;avoidable-bias-ve-variance-azaltmak'
+- 'Farklı Dağılımlardaki Veriler için Eğitim ve Test;farklı-dağılımlardaki-veriler-için-eğitim-ve-test'
+- 'Uyumsuz Veri Dağılımları ile Bias ve Variance;uyumsuz-veri-dağılımları-ile-bias-ve-variance'
+- 'Referans Kaynaklar;referans-kaynaklar'
 ---
 # Giriş
 
@@ -463,7 +490,7 @@ ___
 
 ___
 
-## Dengesiz Sınıflandırma Problemlerinde: Precision vs. Recall 
+## Dengesiz Sınıflandırma Problemlerinde Precision vs. Recall 
 
 Dengesiz sınıflandırma probleminizde kesinlik veya duyarlılık metriklerini kullanmaya karar verebilirsiniz.
 
@@ -508,7 +535,7 @@ Eğer ki sınıflandırıcı bir şeyin kedi olduğunu söylediğinde, bunun ger
 
 
 
-## Dengesiz Sınıflandırma Problemleri için: F-Measure
+## Dengesiz Sınıflandırma Problemleri için F-Measure
 
 Sınıflandırma doğruluğu, model performansını özetlemek için kullanılan tek bir ölçü olduğu için yaygın olarak kullanılmaktadır.
 F-Measure, hem kesinliği hem de duyarlılık, her iki özelliği de yakalayan tek bir ölçümde birleştirmenin bir yolunu sunar.
