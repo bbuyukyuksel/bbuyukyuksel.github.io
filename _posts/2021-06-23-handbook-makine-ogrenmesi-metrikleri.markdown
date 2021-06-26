@@ -11,7 +11,7 @@ contents:
 - 'Tek Sayı Değerlendirme Metriği;tek-sayı-değerlendirme-metriği'
 - 'Confusion Matrix;confusion-matrix'
 - 'Confusion Matrix Nasıl Hesaplanır?;confusion-matrix-nasıl-hesaplanır'
-- 'İki Sınıflı Problemleri Özeldir;i̇ki-sınıflı-problemleri-özeldir'
+- 'İki Sınıflı Problemler Özeldir;i̇ki-sınıflı-problemler-özeldir'
 - 'İki Sınıf Uygulaması;i̇ki-sınıf-uygulaması'
 - 'Çoklu Sınıf Uygulaması;çoklu-sınıf-uygulaması'
 - 'Classification Accuracy;classification-accuracy'
