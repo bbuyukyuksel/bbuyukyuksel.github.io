@@ -39,21 +39,37 @@ layout: main
         </div> <!-- End Wrap Content -->
       </div> <!-- End Page Content -->
     </article> <!-- End Article Page -->
-    
+  
   </div>
   {% if page.contents %}
   <div class="col contents-outer">
     <div class="fixed col">
       <div style="overflow: auto;">
         <h3>İçindekiler</h3>
-        <ul>
+        
           {% for content in page.contents %}
-          <li>
+          
             {% assign splitted = content | split: ";" %}
-            <a href='#{{splitted[1]}}'> {{splitted[0]}} </a>
-          </li>
+            {% assign iteration = splitted[0] | to_integer | plus: 1%}
+            {% assign marker_iteration = iteration | minus:1 %}
+            
+            <span>
+            {% for i in (1..iteration) %}
+              
+              {% if i == iteration %}
+                  <a href='#{{splitted[2]}}'> {{splitted[1]}} </a>    
+                
+              {% elsif i == marker_iteration %}
+               &#9673;
+              {% else %}
+               &#9639;
+              {% endif %}
+              
+            {% endfor %}
+          </span>
+          <br/>
           {% endfor %}
-          </ul>
+        
       </div>  
    </div>
    {% endif%}

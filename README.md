@@ -13,13 +13,10 @@
 Fork the ``master`` branch and follow the [Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/).
 
 - For running
-
+  
   ```shell
   bundle exec jeykll server
   ```
-
-
-
 
 ## Creating Contents:
 
@@ -31,10 +28,6 @@ for(let i=2; i<items.length; ++i){
 }
 ```
 
-
-
-
 ## License
 
 GNU General Public License v3.0
-
