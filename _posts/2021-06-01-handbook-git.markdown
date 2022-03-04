@@ -6,6 +6,7 @@ description: Git kullanımında pratikliğin sağlanabilmesi için oluşturulmu�
 lang: tr
 img: git.png
 tags: [Git, Handbook]
+toc: true
 contents: 
 - 'Giriş;giriş'
 - 'Nedir Bu Kavramlar?;nedir-bu-kavramlar'

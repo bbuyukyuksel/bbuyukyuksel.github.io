@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: Makine Öğrenmesi Metrikleri - El Kitapçığı
 date: 2021-06-23 00:00:00 +0300
@@ -7,6 +8,7 @@ lang: tr
 img: makine-ogrenmesi.jpg
 tags: [Makine Öğrenmesi, Metrikler, Handbook]
 contents: 
+
 - 'Giriş;giriş'
 - 'Tek Sayı Değerlendirme Metriği;tek-sayı-değerlendirme-metriği'
 - 'Confusion Matrix;confusion-matrix'
@@ -36,7 +38,9 @@ contents:
 - 'Farklı Dağılımlardaki Veriler için Eğitim ve Test;farklı-dağılımlardaki-veriler-için-eğitim-ve-test'
 - 'Uyumsuz Veri Dağılımları ile Bias ve Variance;uyumsuz-veri-dağılımları-ile-bias-ve-variance'
 - 'Referans Kaynaklar;referans-kaynaklar'
+
 ---
+
 # Giriş
 
 ‌
@@ -44,8 +48,6 @@ contents:
 Bu el kitabı bir çok kaynak ve şahsi tecrübelerimden de yararlanılarak hazırlanmıştır. Olabildiğince kısa metin içerikleri ile Makine Öğrenmesi Metrikleri ve öğrenme probleminde karşımıza çıkan öğrenememe - aşırı öğrenme (underfitting - overfitting ) konularının açıklanması hedeflenmektedir.
 
 ___
-
-
 
 ![](/assets/img/post_images/makine-ogrenmesi-metrikleri/01.PNG)
 
@@ -56,7 +58,7 @@ ___
   </tr>
   <tr>
     <td>
-		<ul>
+        <ul>
         <li>Daha fazla veri toplayın,</li>
         <li>Daha çeşitli eğitim seti toplayın,</li>
         <li>Gradyan iniş ile algoritmayı daha uzun süre eğitin,</li>
@@ -66,7 +68,7 @@ ___
         <li>Dropout deneyin,</li>
         <li>L<sub>2</sub> düzenelemeyi deneyin,</li>
         <li>Ağ mimarisi ile oynayın (Aktivasyon fonksiyonları, # hidden unit sayıları vb.)</li>
-		</ul>
+        </ul>
       </td>
     <td>
     <ol>
@@ -98,8 +100,6 @@ ___
       </td>
         </tr>
 </table>
-
-
 
 > Erken Durdurma (Early Stopping) : Birçok insan kendi modelini eğitmek için erken durmayı tercih ediyor. ancak bu durum eğitim verilerinden yeterli verim alınmasını engellemektedir.
 
@@ -135,8 +135,6 @@ Aşağıda bir karışıklık matrisi hesaplama süreci yer almaktadır;
    1. Her sınıf için doğru tahmin sayısı.
    2. Tahmin edilen sınıf tarafından düzenlenen, her sınıf için yanlış tahmin sayısı.
 
-
-
 Bu sayılar daha sonra aşağıdaki gibi bir tablo veya matris halinde düzenlenir:
 
 <img src="/assets/img/post_images/makine-ogrenmesi-metrikleri/03.PNG" style="zoom: 67%;" />
@@ -156,14 +154,12 @@ Bu bize şunları verir;
 - Doğru tahmin edilen olaysız değerler için **"gerçek negatif - *true negative*"**.
 - Yanlış tahmin edilen olaysız değerler için **"yanlış negatif - *false negative*"**.
 
-
-
 Bunu karışıklık matrisinde şu şekilde özetleyebiliriz:
 
-| Gerçek / Tahminlenen |     event      |    no-event    |
-| :------------------: | :------------: | :------------: |
-|      **event**       | true positive  | false positive |
-|     **no-event**     | false negative | true negative  |
+| Gerçek / Tahminlenen | event          | no-event       |
+|:--------------------:|:--------------:|:--------------:|
+| **event**            | true positive  | false positive |
+| **no-event**         | false negative | true negative  |
 
 Bu, sınıflandırıcımızın precision, recall, specificity ve sensitivity gibi daha gelişmiş sınıflandırma ölçütlerinin hesaplanmasına yardımcı olabilir.
 
@@ -171,7 +167,7 @@ ___
 
 #### İki Sınıf Uygulaması
 
-````python
+```python
 >>> import numpy as np
 >>> y_true = np.array([1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0])
 >>> y_pred = np.array([1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0])
@@ -186,13 +182,13 @@ ___
 >>> from sklearn import metrics
 >>> confusion_matrix = metrics.confusion_matrix(y_true, y_pred)
 >>> tn, fp, fn, tp = confusion_matrix.ravel()
-````
+```
 
 ___
 
 #### Çoklu Sınıf Uygulaması
 
-````python
+```python
 ## Numeric Implementation
 >>> from sklearn.metrics import confusion_matrix
 >>> y_true = [2, 0, 2, 2, 0, 1]
@@ -209,8 +205,7 @@ array([[2, 0, 0],
 array([[2, 0, 0],
        [0, 0, 1],
        [1, 0, 2]])
-
-````
+```
 
 ___
 
@@ -304,7 +299,6 @@ ___
 # calculate prediction
 >>> precision = precision_score(y_true, y_pred, average='binary')
 >>> print('Precision: %.3f' % precision)
-
 ```
 
 ___
@@ -320,22 +314,14 @@ Kesinlik ölçütü ikili sınıflandırma problemleri ile kısıtlı değildir.
 
 Bu durumda, pozitif sınıflarımız (sınıf-1 ve sınıf-2 olsun) azınlıkta olacaktır.
 
-
-
 > **Kesinlik, her iki pozitif sınıf arasında doğru tahminlerin oranını ölçebilir.**
 
-
-
 1:1:100 azınlık/çoğunluk sınıfı oranına sahip, yani her pozitif sınıf için 1:1 oranı ve azınlık sınıfları için çoğunluk sınıfına oranı 1:100 olan bir veri kümesi düşünün ve her azınlıkta 100 her çoğunluk sınıfında 10.000 örneğimiz olsun.
-
-
 
 Bir model;
 
 - birinci azınlık sınıfı için 50'sinin doğru ve 20'sinin yanlış olduğu 70 örnek tahminde bulunsun. 
 - İkinci sınıf için 99 doğru ve 51 yanlış ile 150 tahminde bulunsun. 
-
-
 
 Bu model için hassasiyet aşağıdaki gibi hesaplanabilir:
 
@@ -345,8 +331,6 @@ Bu model için hassasiyet aşağıdaki gibi hesaplanabilir:
 - Precision = 149 / 220
 - Precision = 0.677
 
-
-
 > **Azınlık sınıflarının sayısını artırdıkça hassas metrik hesaplamanın ölçeklendiğini görebiliriz.**
 
 ___
@@ -354,7 +338,6 @@ ___
 ### Uygulama
 
 ```python
-
 ###################################################################
 # calculates precision for 1:1:100 dataset with 50tp,20fp, 99tp,51fp
 ###################################################################
@@ -370,14 +353,13 @@ ___
 >>> pred_pos1 = [0 for _ in range(50)] + [1 for _ in range(50)]
 >>> pred_pos2 = [0 for _ in range(1)] + [2 for _ in range(99)]
 >>> pred_neg = [1 for _ in range(20)] \
-  					+ [2 for _ in range(51)] \
-					+ [0 for _ in range(9929)]
+                      + [2 for _ in range(51)] \
+                    + [0 for _ in range(9929)]
 >>> y_pred = pred_pos1 + pred_pos2 + pred_neg
 
 # calculate prediction
 >>> precision = precision_score(y_true, y_pred, labels=[1,2], average='micro')
 >>> print('Precision: %.3f' % precision)
-
 ```
 
 ___
@@ -416,7 +398,6 @@ ___
 ### Uygulama
 
 ```python
-
 ###################################################################
 # calculates recall for 1:100 dataset with 90 tp and 10 fn
 ###################################################################
@@ -435,7 +416,6 @@ ___
 # calculate recall
 >>> recall = recall_score(y_true, y_pred, average='binary')
 >>> print('Recall: %.3f' % recall)
-
 ```
 
 ___
@@ -465,7 +445,6 @@ ___
 ### Uygulama
 
 ```python
-
 ###################################################################
 # calculates recall for 1:1:100 dataset with 77tp,23fn and 95tp,5fn 
 ###################################################################
@@ -486,12 +465,11 @@ ___
 # calculate recall
 >>> recall = recall_score(y_true, y_pred, labels=[1,2], average='micro')
 >>> print('Recall: %.3f' % recall)
-
 ```
 
 ___
 
-## Dengesiz Sınıflandırma Problemlerinde Precision vs. Recall 
+## Dengesiz Sınıflandırma Problemlerinde Precision vs. Recall
 
 Dengesiz sınıflandırma probleminizde kesinlik veya duyarlılık metriklerini kullanmaya karar verebilirsiniz.
 
@@ -500,12 +478,8 @@ Bu durumda,
 - Kesinliği en üst düzeye çıkarmak, yanlış pozitiflerin sayısını en aza indirirken, 
 - Duyarlılığı en üst düzeye çıkarmak, yanlış negatiflerin sayısını en aza indirecektir.
 
-
-
 > Kesinlik: Yanlış pozitifleri en aza indirirken uygun odak noktasıdır.
 > Duyarlılık: Yanlış negatifleri en aza indirirken uygun odak noktasıdır.
-
-
 
 Çoğu zaman modelimizden pozitif sınıf için mükemmel tahminler isteriz, yüksek kesinlik ve yüksek duyarlılık.
 
@@ -515,13 +489,9 @@ Bu durumda,
 
 <img src="/assets/img/post_images/makine-ogrenmesi-metrikleri/10.PNG" style="zoom: 100%;" />
 
-
-
 > **Kesinlik**: Mevcut sınıflarımdan kaç tanesini kedi olarak tahmin edebilirim?
->
+> 
 > **Duyarlılık**: Kedi olarak kaç tane kedi tahmin edebilirim?
-
-
 
 Kesinliğin tanımı, sınıflandırıcınızın kedi olarak tanıdığı örneklerin yüzde kaçı gerçekte kedidir?
 Dolayısıyla, A sınıflandırıcısı %95 kesinliğe (precision) sahipse, bu, A sınıflandırıcısının bir şeyin kedi olduğunu söylediğinde, bunun gerçekten bir kedi olma ihtimalinin %95 olduğu anlamına gelir.
@@ -534,16 +504,12 @@ Bu yüzden kesinlik ve duyarlılık tanımları hakkında çok fazla endişelenm
 
 Eğer ki sınıflandırıcı bir şeyin kedi olduğunu söylediğinde, bunun gerçekten bir kedi olma olasılığı yüksektir. Ancak kedi olan tüm görüntülerin büyük bir kısmını gerçekten kedi olarak tahminlemesini de istersiniz. Bu nedenle, sınıflandırıcıları kesinliği ve duyarlılığı açısından değerlendirmeye çalışmak mantıklı olabilir. Değerlendirme ölçütü olarak duyarlılık kullanmanın sorunu, eğer A sınıflandırıcısı burada yaptığı gibi duyarlılıkta daha başarılıysa, B sınıflandırıcısının kesinlikte daha iyi olması, o zaman hangi sınıflandırıcının daha iyi olduğundan emin olamamanızdır.
 
-
-
 ## Dengesiz Sınıflandırma Problemleri için F-Measure
 
 Sınıflandırma doğruluğu, model performansını özetlemek için kullanılan tek bir ölçü olduğu için yaygın olarak kullanılmaktadır.
 F-Measure, hem kesinliği hem de duyarlılık, her iki özelliği de yakalayan tek bir ölçümde birleştirmenin bir yolunu sunar.
 Tek başına, ne kesinlik ne de duyarlılık tüm hikayeyi anlatmaz. Korkunç duyarlılık ile mükemmel kesinliğe veya alternatif olarak mükemmel duyarlılık ile korkunç kesinliğe sahip olabiliriz.  F-ölçümü, her iki endişeyi de tek bir puanla ifade etmenin bir yolunu sunar.
 İkili veya çok sınıflı bir sınıflandırma problemi için kesinlik ve duyarlılık hesaplandıktan sonra, bu iki metrik F-Measure hesaplamasında birleştirilebilir.
-
-
 
 Geleneksel F-Measure aşağıdaki gibi hesaplanır:
 
@@ -565,15 +531,11 @@ Bir örnekle bu hesabı somutlaştıralım.
 
 Pozitif sınıf için 150 örnek öngören, 95'i doğru (gerçek pozitifler), yani beşi kaçırıldı (yanlış negatifler) ve 55'i yanlış (yanlış pozitifler) öngören bir model düşünün.
 
-
-
 Kesinliği şu şekilde hesaplayabiliriz:
 
 * Precision = TruePositives / (TruePositives + FalsePositives)
 * Precision = 95 / (95 + 55)
 * Precision = 0.633
-
-
 
 Duyarlılığı şu şekilde hesaplayabiliriz:
 
@@ -582,8 +544,6 @@ Duyarlılığı şu şekilde hesaplayabiliriz:
 * Recall = 0.95
 
 Görüldüğü gibi modelin kesinliğinin zayıf olduğunu, ancak mükemmel duyarlığı olduğu gözükmektedir.
-
-
 
 Son olarak, F-Measure'ı aşağıdaki gibi hesaplayabiliriz:
 
@@ -600,7 +560,6 @@ ___
 ### Uygulama
 
 ```python
-
 ###################################################################
 # calculates f1 for 1:100 dataset with 95tp, 5fn, 55fp
 ###################################################################
@@ -619,7 +578,6 @@ ___
 # calculate score
 >>> score = f1_score(y_true, y_pred, average='binary')
 >>> print('F-Measure: %.3f' % score)
-
 ```
 
 ___
@@ -628,24 +586,16 @@ ___
 
 Sonraki süreçte başarıyı elde edeceğini umduğunuz ve başarılı olmanın önemli olduğunu düşündüğünüz verileri yansıtmak için bir geliştirme seti ve test seti seçin.
 
-
-
 > Geliştirme ve test setlerinizin aynı dağıtımdan gelmesini sağlamanın bir yolunu bulmanızı tavsiye edin.
-
-
 
 ## Veri Kümesini Bölme
 
-
-
 Eğer ki 100, 1000, 10000 örneğe sahipsek;
 
-| Train | Dev  | Test |
-| ----- | ---- | ---- |
-| 0.7   | -    | 0.3  |
-| 0.6   | 0.2  | 0.2  |
-
-
+| Train | Dev | Test |
+| ----- | --- | ---- |
+| 0.7   | -   | 0.3  |
+| 0.6   | 0.2 | 0.2  |
 
 Eğer ki 1 milyondan fazla örneğe sahipsek;
 
@@ -657,15 +607,11 @@ ___
 
 # Avoidable Bias
 
-
-
 |                | Dataset-1 (%) | Dataset-2 (%) |
 | -------------- | ------------- | ------------- |
 | Humans (Bayes) | 1             | 7.5           |
 | Training Error | 8             | 8             |
 | Dev Error      | 10            | 10            |
-
-
 
 Yukarıdaki tabloda görüldüğü gibi “Dataset-1” üzerinde çalışıyorsak; insan hata oranımız %1, derin öğrenme modelimizin hatası Training-Set'te %8 ve Dev-Set'te %10'dur. Eğitim verileri ile insan hatası arasındaki yanlılık görüldüğü gibi %7'dir. Bu bias değeri uygulama alanına göre kabul edilebilir bir değer değildir.
 
@@ -678,7 +624,7 @@ Kullanılabilir biasımız veri seti-1'de %7, veri seti-2'de %0.5'tir. Ve her ik
 
 ___
 
-#  (avoidable) Bias ve Variance Azaltmak
+# (avoidable) Bias ve Variance Azaltmak
 
 <img src="/assets/img/post_images/makine-ogrenmesi-metrikleri/11.PNG" style="zoom: 100%;" />
 
@@ -686,8 +632,6 @@ Denetimli Öğrenmenin İki Temel Varsayımı:
 
 * Modeliniz eğitim setinde oldukça iyi performans sağlar. (Kullanılabilir Önyargı)
 * Eğitim seti performansı, geliştirme/test setine oldukça iyi genellenir. (Varyans)
-
-
 
 Makine öğrenimi sisteminizin performansını artırmak istiyorsanız, eğitim hatanız ile Bayes hatası için proxy'niz arasındaki farka bakılması tavsite edilebilir ve size önlenebilir önyargı hakkında bir fikir verir. Başka bir deyişle, eğitim setinizdeki başarıyı daha iyi ne kadar yapmaya çalışmanız gerektiği  hakkında yardımcı olur. Ardından, ne kadar varyans probleminiz olduğuna dair bir tahmin olarak geliştirme hatanız ile eğitim hatası arasındaki farka bakılması gerekmektedir. Başka bir deyişle, performansınızı eğitim setinden açıkça eğitilmediği geliştirici setine genelleştirmek için ne kadar çok çalışmanız gerektiği hakkında bilgi verecektir.
 
@@ -707,8 +651,6 @@ Müşterilerimiz için telefon ile fotoğrafı çekilmiş nesneler içerisindeki
 | -------------------------------- | ------------------------------- |
 | ~200.000                         | ~10.000                         |
 
-
-
 Seçenek - 1
 
 210.000 karıştırılmış veri,
@@ -717,19 +659,13 @@ Seçenek - 1
 | -------- | ------- | ----- | ----- |
 | Shuffled | 205.000 | 2.500 | 2.500 |
 
-
-
 Seçenek - 2
 
 205.000 eğitim kümesi websitesi + uygulamadan toplanan, kalan 5000 dev ve test kümesi için,
 
-
-
 | Non-Shuffled | train   | dev   | test  |
 | ------------ | ------- | ----- | ----- |
 |              | 205.000 | 2.500 | 2.500 |
-
-
 
 > Dev ve Test seti dağılımının aynı olmasına özen gösterilmeli.
 
@@ -737,24 +673,15 @@ ___
 
 ## Uyumsuz Veri Dağılımları ile Bias ve Variance
 
-
-
 Train set ve Train-Dev set aynı dağılımdan gelmektedir.
 
-
-
 > Human Error: Veri setinin gözlemci tarafından doğrulanması sonucunda ortaya çıkan hata oranıdır.
->
+> 
 > Train Error: Modelin, eğitim seti üzerinde gerçekleştirdiği hata oranıdır.
->
+> 
 > Train-Dev Error: Eğitim seti içerisinden ayıklanmış verinin hata oranıdır.
->
+> 
 > Dev Error: Eğitim içerisinde model tarafından değerlendirilmeyen verinin hata oranıdır.
-
-
-
-
-
 
 <table>
     <tr>
@@ -777,8 +704,6 @@ Train set ve Train-Dev set aynı dağılımdan gelmektedir.
 
 Train Error ile Train-Dev Error arasında %8 hata farkı gözlenmektedir. Bu tablo için variance, overfitting problemi olduğu söylenebilir.
 
-
-
 <table>
     <tr>
         <td>Human Error</td>
@@ -799,8 +724,6 @@ Train Error ile Train-Dev Error arasında %8 hata farkı gözlenmektedir. Bu tab
 </table>
 
 Human Error ile Train Error arasında %10 hata farkı gözlenmektedir. Bu tablo için bias, underfitting problemi olduğu söylenebilir.
-
-
 
 <table>
     <tr>
@@ -842,6 +765,3 @@ ___
 4. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
 
 5. DeepLearningAI - Structuring Machine Learning Projects
-
-   
-

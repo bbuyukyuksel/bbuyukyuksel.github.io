@@ -1,0 +1,65 @@
+function sleepFor( sleepDuration ){
+  var now = new Date().getTime();
+  while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
+}
+
+function pad(num, size) {
+    var s = "000000000" + num;
+    return s.substr(s.length-size);
+}
+
+function downloadURI(uri, name) {
+  var link = document.createElement("a");
+  link.download = name;
+  link.href = uri;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  delete link;
+}
+
+
+let downloader = function() {
+	let elements = document.getElementsByClassName("ndfHFb-c4YZDc-cYSp0e-DARUcf-RJLb9c");//document.getElementsByTagName("img");
+	let iteration=0;
+	for (let i in elements) {
+		let img = elements[i];
+		console.log("add img", img, iteration);
+		if(!/^blob:/.test(img.src)){
+			console.log("invalid src");
+			continue;
+		}
+		let can = document.createElement("canvas");
+		let con = can.getContext("2d");
+		can.width = img.width*2;
+		can.height = img.height*2;
+		con.drawImage(img, 0, 0, can.width, can.height);
+		let imgData = can.toDataURL("image/jpeg", 1.0);
+		downloadURI(imgData, "slayt-" + pad(++iteration, 3) + ".jpeg")
+		sleepFor(1500);
+
+
+	}
+	
+};
+
+
+let downloadone = function(iteration) {
+    let elements = document.getElementsByClassName("ndfHFb-c4YZDc-cYSp0e-DARUcf-RJLb9c");//document.getElementsByTagName("img");
+    
+
+    let img = elements[iteration-1];
+    console.log("add img", img, iteration);
+    if(!/^blob:/.test(img.src)){
+        console.log("invalid src");
+    }
+    let can = document.createElement("canvas");
+    let con = can.getContext("2d");
+    can.width = img.width*2;
+    can.height = img.height*2;
+    con.drawImage(img, 0, 0, can.width, can.height);
+    let imgData = can.toDataURL("image/jpeg", 1.0);
+    downloadURI(imgData, "slayt-" + pad(iteration, 3) + ".jpeg")
+}
+
+downloader();
