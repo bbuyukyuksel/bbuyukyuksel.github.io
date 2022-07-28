@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Docker for absolute beginners - El Kitapçığı
-date: 2022-03-04 00:00:00 +0300
-description: Introduction to docker environment.
+title: Writing code to the c++ compiler
+date: 2022-07-28 00:00:00 +0300
+description: C++ Templates
 lang: en
-img: docker.png
-tags: [Docker, Container, Handbook]
+img: software.jpg
+tags: [C++, Templates, Compiler]
 contents: 
 - 1;Introduction;introduction'
 - 1;Starting;starting'
