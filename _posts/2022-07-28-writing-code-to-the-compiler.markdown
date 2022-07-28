@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Writing code to the c++ compiler
-date: 2022-07-28 00:00:00 +0300
-description: C++ Templates
+title: Docker for absolute beginners - El Kitapçığı
+date: 2022-03-04 00:00:00 +0300
+description: Introduction to docker environment.
 lang: en
-img: software.jpg
-tags: [C++, Templates, Compiler]
+img: docker.png
+tags: [Docker, Container, Handbook]
 contents: 
 - 1;Introduction;introduction'
 - 1;Starting;starting'
@@ -113,6 +113,83 @@ void print(T1 p1, T2 p2, T3 p3){
         (std::cout << p3 << ", " ,0 ),
     };
 }
+```
+
+## Calculation Expression by Templates
+
+### Factorial
+
+```cpp
+template<int n>
+struct Factorial : Factorial<n - 1>{
+    const static int value = n * Factorial<n-1>::value;
+};    
+
+template<>
+struct Factorial<1>{
+    const static int value = 1;
+};      
+```
+
+```cpp
+#include <iostream>
+int main(){
+    std::cout << Factorial<5>::value << '\n';
+    constexpr auto i = Factorial<4>::value;
+}
+```
+
+## Power
+
+```cpp
+template<int base, int power>
+struct Power{
+    const static int value = base * Power<base, power-1>::value;
+};
+
+template<int base>
+struct Power<base, 1>{
+    const static int value = base;
+};
+```
+
+```cpp
+#include <iostream>
+int main(){
+    std::cout << Power<2,5>::value << '\n';
+    constexpr auto i { Power<2, 5>::value };
+}
+```
+
+## Summer
+
+```cpp
+template<typename T>
+T summer(T last){
+    return last;
+}
+
+template<typename T, typename ...Args>
+T summer(T first, const Args& ...args){
+    return first + summer(args...);
+}
+```
+
+```cpp
+#include <iostream>
+#include <string>
+int main(){
+    using namespace std;
+    std::cout << summer(10, 20, 30) << '\n';
+
+    string s1{ "Bur" }, s2{ "ak" };
+    std::cout << summer(s1, s2, " Büyük"s, "yüksel"s) << '\n';
+}
+```
+
+```
+60
+burak Büyükyüksel
 ```
 
 
