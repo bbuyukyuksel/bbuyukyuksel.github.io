@@ -4,12 +4,12 @@ title: Docker for absolute beginners - El Kitapçığı
 date: 2022-03-04 00:00:00 +0300
 description: Introduction to docker environment.
 lang: en
-img: docker.png
-tags: [Docker, Container, Handbook]
+img: software.jpg
+tags: [C++, Templates, Compiler]
 contents: 
 - 1;Introduction;introduction'
 - 1;Starting;starting'
-- 2;Let's let the compiler write the code.;...'
+- 2;Let's let the compiler write the code;...'
 
 ---
 
@@ -25,7 +25,9 @@ Before we start the post, we need to talk about c++ templates.
 
 The C++ templates, the codes which is written at run-time by compiler. We can take advantage of some C++ usefull syntax knowladges as like function overloading, type-independent function or class definitions
 
-# Some Code Tricks
+____
+
+# Let's let the compiler write the code
 
 ## print function
 
@@ -66,7 +68,7 @@ void print(const char*, char);
 void print(char);
 ```
 
-### Second one, using comma operator
+### Second one, comma operator technique:
 
 Before we apply this technique, we need to mention comma operator. Comma operator gives us the guarantee which is processed arguments until last arguments.
 
@@ -115,7 +117,9 @@ void print(T1 p1, T2 p2, T3 p3){
 }
 ```
 
-## Calculation Expression by Templates
+____
+
+## Calculation the expression using templates
 
 ### Factorial
 
@@ -191,5 +195,3 @@ int main(){
 60
 burak Büyükyüksel
 ```
-
-
