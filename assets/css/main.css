@@ -1510,3 +1510,12 @@ a.newer-posts:hover {
   margin-top:5px;
   color:red;
 }
+
+.content-area{
+	overflow-y: scroll;
+	height:100%;
+	
+	-webkit-box-shadow: inset 20px -14px 24px -15px rgba(66, 68, 90, 1);
+	-moz-box-shadow: inset 20px -14px 24px -15px rgba(66, 68, 90, 1);
+	box-shadow: inset 20px -14px 24px -15px rgba(66, 68, 90, 1);
+}

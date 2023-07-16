@@ -43,30 +43,17 @@ layout: main
   </div>
   {% if page.contents %}
   <div class="col contents-outer">
-    <div class="fixed col" style="overflow-y: scrool; height:400px">
-      <div style="overflow: auto;">
+    <div class="fixed col" style="height:500px">
+      <div class="content-area">
         <h3>İçindekiler</h3>
         
           {% for content in page.contents %}
           
             {% assign splitted = content | split: ";" %}
-            {% assign iteration = splitted[0] | to_integer | plus: 1%}
-            {% assign marker_iteration = iteration | minus:1 %}
-            
             <span>
-            {% for i in (1..iteration) %}
-              
-              {% if i == iteration %}
-                <a href='#{{splitted[1]}}'> {{splitted[0]}} </a>      
-              {% elsif i == marker_iteration %}
-                &#9673;
-              {% else %}
-              	&nbsp;
-              {% endif %}
-              
-            {% endfor %}
-          </span>
-          <br/>
+                &#9673; <a href='#{{splitted[1]}}'> {{splitted[0]}} </a>      	
+            </span>
+            <br/>
           {% endfor %}
         
       </div>  
