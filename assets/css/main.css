@@ -1513,9 +1513,8 @@ a.newer-posts:hover {
 
 .content-area{
 	overflow-y: scroll;
-	height:100%;
-	
-	-webkit-box-shadow: inset 20px -14px 24px -15px rgba(66, 68, 90, 1);
-	-moz-box-shadow: inset 20px -14px 24px -15px rgba(66, 68, 90, 1);
-	box-shadow: inset 20px -14px 24px -15px rgba(66, 68, 90, 1);
+	height:100%;	
+	-webkit-box-shadow: -16px 16px 33px -9px rgba(66, 68, 90, 1);
+	-moz-box-shadow: -16px 16px 33px -9px rgba(66, 68, 90, 1);
+	box-shadow: -16px 16px 33px -9px rgba(66, 68, 90, 1);
 }
