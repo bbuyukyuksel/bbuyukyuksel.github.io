@@ -55,7 +55,7 @@ Bu yazıda C++ konusunda threading, senkronizasyon mekanizmaları, semaforlar ve
 
 Bu yazı, C++ dilinde çoklu iş parçacıklı ve paralel programlamaya giriş niteliğindedir. Bu konuların anlaşılması, performansı artırmak ve verimli kod yazmak için önemlidir.
 
-___
+---
 
 <!-- 
 # İçindekiler
@@ -96,7 +96,7 @@ ___
 		3. Round Robin
 			1. Basit İmplementasyon
 			2. Consumer-Prodocer Implementasyonu
-___
+---
 -->
 
 # Senkronizasyon Mekanizmaları Hakkında Özet
@@ -119,7 +119,7 @@ C++ dilindeki senkronizasyon mekanizmaları, farklı senaryolara göre çeşitli
     
 
 Bu, C++ dilinde kullanılan bazı temel senkronizasyon mekanizmalarının bir özeti idi. Her senaryo farklı gereksinimler gerektirebilir, bu nedenle doğru senkronizasyon mekanizmasını seçmek önemlidir. C++ standart kütüphanesi bu mekanizmaları sağlar ve bu mekanizmaların kullanımı, paralel programlama ve eşzamanlılık konularında daha fazla bilgi ve anlayış gerektirebilir.
-___
+---
 
 # 1. Mutex
 
@@ -167,7 +167,7 @@ Bu örnekte, `std::mutex` sınıfı kullanılarak bir mutex nesnesi oluşturulur
 Ana iş parçacığı, iki `WorkerThread` işlevini ayrı iş parçacıklarında çalıştırır. Her iş parçacığı sırayla mutex'i kilitleyerek kritik bölgeye erişir ve ardından mutex kilidini açar.
 
 Bu şekilde, mutex kullanarak paylaşılan bir kaynağa eşzamanlı erişimi kontrol edebilir ve senkronizasyon sağlayabilirsiniz. Mutex'ler, paralel programlama ve eşzamanlılık konularında güvenli ve tutarlı bir paylaşımı sağlamak için önemli bir araçtır.
-___
+---
 
 # 2. Recursive Mutex
 
@@ -262,7 +262,8 @@ Bu örnekte, iki farklı fonksiyon olan `NormalFunction` ve `RecursiveFunction` 
 Örnekte, `RecursiveFunction` derinliği azaltarak kendini tekrar tekrar çağırırken, her seferinde aynı mutex'i tekrar kilitleyebilir.
 
 Bu şekilde, normal mutex ve yeniden girişimli mutex arasındaki farkı görebilirsiniz. Normal mutex, aynı iş parçacığı tarafından tekrar kilitleme yapamazken, yeniden girişimli mutex aynı iş parçacığı tarafından birden fazla kez kilitleme yapabilir.
-___
+
+---
 
 # 3. Lock Guard
 
@@ -306,7 +307,8 @@ Bu örnekte, `std::lock_guard` sınıfı kullanılarak bir `lock` nesnesi oluşt
 Ana iş parçacığı, iki `WorkerThread` işlevini ayrı iş parçacıklarında çalıştırır. Her iş parçacığı, `std::lock_guard` kullanarak mutex'i kilitleyerek kritik bölgeye erişir ve ardından kapsamdan çıkıldığında otomatik olarak mutex'i serbest bırakır.
 
 `std::lock_guard` sınıfı, RAII (Resource Acquisition Is Initialization) idiyomunu kullanarak, kaynakların otomatik olarak temizlenmesini sağlar. Bu sayede, mutex kilidinin unutulması veya hatalı bir şekilde serbest bırakılması gibi sorunlar ortadan kalkar ve kodun daha güvenli hale gelmesi sağlanır.
-___
+
+---
 
 # 4. Unique Lock
 
@@ -431,7 +433,8 @@ Bu örnekte, `UniqueLockExample` işlevi, belirli bir koşulu kontrol ederek mut
 
 Bu şekilde, `std::unique_lock`'un `unlock()` ve `lock()` işlevlerini kullanarak daha fazla esneklik sağladığını ve mutex kilidini daha ince bir kontrolle yönetmenize olanak tanıdığını görebilirsiniz.
 
-___
+---
+
 # 5. Condition Variable
 
 `std::condition_variable`, C++ standart kütüphanesindeki senkronizasyon mekanizmalarından biridir. `std::condition_variable`, iş parçacıkları arasında iletişim kurmayı sağlar ve iş parçacıklarının birbirlerini beklemesine veya birbirlerini uyandırmasına olanak tanır. Bir iş parçacığı, belirli bir koşulu kontrol ederek diğer iş parçacıklarını uyandırabilir veya bekleyebilir.
@@ -547,7 +550,7 @@ Bu örnekte, `WorkerThread` adlı bir iş parçacığı oluşturulur. Bu iş par
 Ana iş parçacığında, `std::condition_variable` ve `std::mutex` kullanılarak bir zamana bağlı koşullu değişken senaryosu oluşturulur. `std::unique_lock` sınıfı kullanılarak `std::mutex` kilidi alınır. Ardından, `cv.wait_for()` işlevi çağrılarak bir süre boyunca beklenir ve `flag` koşulunun sağlanması beklenir. Eğer belirtilen süre içinde koşul sağlanırsa, `"Bekleme süresi içinde koşul sağlandı"` mesajı ekrana yazdırılır. Aksi halde, `"Bekleme süresi içinde koşul sağlanmadı"` mesajı ekrana yazdırılır.
 
 Bu şekilde, `std::condition_variable` ve `std::chrono` kütüphanelerini kullanarak zamana bağlı bir koşul kontrolü yapabilir ve belirli bir süre boyunca bekleyebilirsiniz. Bu senaryoda, `wait_for()` işlevi belirtilen süre boyunca bekler ve beklenen koşulun sağlanıp sağlanmadığını kontrol eder.
-___
+---
 
 # 6. Atomic
 
@@ -670,7 +673,7 @@ Bu örnekte, `std::memory_order_acquire` seçeneği `load` ve `store` işlemleri
 `ConsumerThread` iş parçacığı, `ready` bayrağının true olmasını beklerken, `std::memory_order_acquire` seçeneğini kullanır. Bu sayede, `ready` bayrağı true olduğunda, `data` değişkenini okuyarak güncel veriye erişir.
 
 Bu örnekte, `std::memory_order_acquire` kullanarak okuma işlemi sırasında gerekli senkronizasyonu sağlamış oluyoruz, böylece verinin güncel olduğundan emin olabiliriz.
-___
+---
 
 # 7. Atomic Flag
 
@@ -722,12 +725,14 @@ int main() {
 Bu örnekte, `std::atomic_flag` türünde bir atomik bayrak `lock` oluşturulur. Her iş parçacığı `test_and_set()` işlevini kullanarak bayrağı ayarlamaya çalışır. Eğer bayrak zaten ayarlı ise, yani bir başka iş parçacığı kritik bölgedeyse, iş parçacığı beklemek zorunda kalır. Bayrak başarılı bir şekilde ayarlandığında, iş parçacığı kritik bölgeye girer ve işlemlerini gerçekleştirir. Ardından, `clear()` işlevi kullanılarak bayrak temizlenir ve başka bir iş parçacığı kritik bölgeye girebilir.
 
 Bu şekilde, `std::atomic_flag` kullanarak bir kritik bölgeye giriş ve çıkış kontrolü sağlayabilirsiniz. Bu, senkronizasyonu kontrol etmek ve veri yarışmalarını önlemek için kullanışlı bir mekanizmadır.
-___
+
+---
 
 # 8. Extra
 
 Bu kısımda C++ tarafından direkt olarak desteklenmeyen Semaphore kavramı üzerinde duracağız. Ek olarak `thread_local`, `spin lock`, `defer_lock`, `adopt_lock`, `scoped_lock`, `deadlock`, `starvation`, ve `livelock` konularına değindikten sonra `thread pool`, `consumer-producer`, `Round-Robin` algoritmasının implementasyonunu senkronizasyon yöntemlerini kullanarak gerçekleştireceğiz.
-___
+
+---
 
 ## 8.1. Thread Local
 
@@ -814,7 +819,8 @@ Main Thread - thread_local Değişken: 3
 ```
 
 Sonuç olarak, global değişkenler programın her yerinden erişilebilirken, local değişkenler sadece tanımlandıkları blok veya işlev içerisinde geçerlidir. `thread_local` değişkenler ise her iş parçacığı için ayrı bellek alanına sahip olup her iş parçacığı tarafından ayrı ayrı kullanılır.
-___
+
+---
 
 ## 8.2. Semaphore
 
@@ -1166,7 +1172,8 @@ Bu örnekte, Boost C++ kütüphanesinin `boost::interprocess::interprocess_semap
 `timed_wait()` işlevi, beklenen sürenin yanı sıra `boost::posix_time::seconds` kullanarak zaman aşımı süresini belirtir. İş parçacığı kaynağı başarıyla kullanabilirse, kaynak kullanımını gerçekleştirir. Zaman aşımı durumunda ise, ilgili mesajı ekrana yazdırır.
 
 Bu şekilde, Boost C++ kütüphanesinin `boost::interprocess::interprocess_semaphore` sınıfı ile Timed Semaphore kullanarak belirli bir süre boyunca kaynak bekleyen iş parçacıklarını ele alabilirsiniz.
-___
+
+---
 
 ## 8.3. Spin Lock
 
@@ -1223,7 +1230,8 @@ int main() {
     return 0;
 }
 ```
-___
+
+---
 
 ## 8.4. Deadlock, Starvation, Livelock
 
@@ -1925,7 +1933,7 @@ Employee Bob has lunch partners: Alice Dave Christina
 Employee Christina has lunch partners: Alice Bob
 Employee Dave has lunch partners: Bob
 ```
-___
+---
 
 ## 8.7. Async Fonksiyon ve `std::future`
 
@@ -2092,7 +2100,7 @@ int main() {
 Yukarıdaki örnekte, `std::launch::async | std::launch::deferred` politikası kullanılarak `std::async` fonksiyonu çağrılmaktadır. Bu, hem asenkron hem de ertelenmiş yürütme için en iyi seçeneği sistem tarafından belirler.
 
 Bu politikalar, `std::async` fonksiyonunu kullanırken işlemlerin nasıl yürütüleceğini belirlememizi sağlar. Bu sayede, paralel işlemler oluşturabilir, iş parçacığı havuzlarını kullanabilir ve beklemeli işlemleri yönetebiliriz.
-___
+---
 
 # 8.6. İmplementasyonlar
 
