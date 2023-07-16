@@ -4,7 +4,7 @@ title: Writing code to the compiler
 date: 2022-07-28 00:00:00 +0300
 description: Writing code to the compiler.
 lang: en
-img: software.jpg
+img: post_images/compiler.png
 tags: [C++, Templates, Compiler]
 contents: 
 - 'Introduction;introduction'
