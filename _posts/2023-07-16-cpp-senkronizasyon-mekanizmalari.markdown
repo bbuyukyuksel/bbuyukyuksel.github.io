@@ -8,7 +8,6 @@ img: post_images/thread.png
 tags: ['C++', 'threading', 'multiprocessing', 'senkronizasyon mekanizmaları', 'mutex', 'lock_guard', 'unique_lock', 'condition_variable', 'semafor', 'binary semaphore', 'counting semaphore', 'recursive semaphore', 'deadlock', 'starvation', 'livelock', 'async fonksiyonlar', 'std::future']
 contents:
 - 'Giriş;giriş'
-- 'İçindekiler;i̇çindekiler'
 - 'Senkronizasyon Mekanizmaları Hakkında Özet;senkronizasyon-mekanizmaları-hakkında-özet'
 - '1. Mutex;1-mutex'
 - '2. Recursive Mutex;2-recursive-mutex'
@@ -55,8 +54,10 @@ contents:
 Bu yazıda C++ konusunda threading, senkronizasyon mekanizmaları, semaforlar ve async fonksiyonlar gibi konuları ele aldım. Senkronizasyon mekanizmaları arasında mutex, lock_guard, unique_lock ve condition_variable gibi yapıları öğreneceğiz. Aynı zamanda semafor türlerini ve senkronizasyon problemlerini de ele alacağız. Ayrıca, async fonksiyonları ve std::future kütüphanesini kullanarak asenkron işlemleri yönetmeyi öğreneceğiz.
 
 Bu yazı, C++ dilinde çoklu iş parçacıklı ve paralel programlamaya giriş niteliğindedir. Bu konuların anlaşılması, performansı artırmak ve verimli kod yazmak için önemlidir.
+
 ___
 
+<!-- 
 # İçindekiler
 
 - Senkronizasyon Mekanizmaları Hakkında Özet
@@ -96,6 +97,7 @@ ___
 			1. Basit İmplementasyon
 			2. Consumer-Prodocer Implementasyonu
 ___
+-->
 
 # Senkronizasyon Mekanizmaları Hakkında Özet
 
