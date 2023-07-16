@@ -119,6 +119,7 @@ C++ dilindeki senkronizasyon mekanizmaları, farklı senaryolara göre çeşitli
     
 
 Bu, C++ dilinde kullanılan bazı temel senkronizasyon mekanizmalarının bir özeti idi. Her senaryo farklı gereksinimler gerektirebilir, bu nedenle doğru senkronizasyon mekanizmasını seçmek önemlidir. C++ standart kütüphanesi bu mekanizmaları sağlar ve bu mekanizmaların kullanımı, paralel programlama ve eşzamanlılık konularında daha fazla bilgi ve anlayış gerektirebilir.
+
 ---
 
 # 1. Mutex
@@ -167,6 +168,7 @@ Bu örnekte, `std::mutex` sınıfı kullanılarak bir mutex nesnesi oluşturulur
 Ana iş parçacığı, iki `WorkerThread` işlevini ayrı iş parçacıklarında çalıştırır. Her iş parçacığı sırayla mutex'i kilitleyerek kritik bölgeye erişir ve ardından mutex kilidini açar.
 
 Bu şekilde, mutex kullanarak paylaşılan bir kaynağa eşzamanlı erişimi kontrol edebilir ve senkronizasyon sağlayabilirsiniz. Mutex'ler, paralel programlama ve eşzamanlılık konularında güvenli ve tutarlı bir paylaşımı sağlamak için önemli bir araçtır.
+
 ---
 
 # 2. Recursive Mutex
@@ -550,6 +552,7 @@ Bu örnekte, `WorkerThread` adlı bir iş parçacığı oluşturulur. Bu iş par
 Ana iş parçacığında, `std::condition_variable` ve `std::mutex` kullanılarak bir zamana bağlı koşullu değişken senaryosu oluşturulur. `std::unique_lock` sınıfı kullanılarak `std::mutex` kilidi alınır. Ardından, `cv.wait_for()` işlevi çağrılarak bir süre boyunca beklenir ve `flag` koşulunun sağlanması beklenir. Eğer belirtilen süre içinde koşul sağlanırsa, `"Bekleme süresi içinde koşul sağlandı"` mesajı ekrana yazdırılır. Aksi halde, `"Bekleme süresi içinde koşul sağlanmadı"` mesajı ekrana yazdırılır.
 
 Bu şekilde, `std::condition_variable` ve `std::chrono` kütüphanelerini kullanarak zamana bağlı bir koşul kontrolü yapabilir ve belirli bir süre boyunca bekleyebilirsiniz. Bu senaryoda, `wait_for()` işlevi belirtilen süre boyunca bekler ve beklenen koşulun sağlanıp sağlanmadığını kontrol eder.
+
 ---
 
 # 6. Atomic
@@ -673,6 +676,7 @@ Bu örnekte, `std::memory_order_acquire` seçeneği `load` ve `store` işlemleri
 `ConsumerThread` iş parçacığı, `ready` bayrağının true olmasını beklerken, `std::memory_order_acquire` seçeneğini kullanır. Bu sayede, `ready` bayrağı true olduğunda, `data` değişkenini okuyarak güncel veriye erişir.
 
 Bu örnekte, `std::memory_order_acquire` kullanarak okuma işlemi sırasında gerekli senkronizasyonu sağlamış oluyoruz, böylece verinin güncel olduğundan emin olabiliriz.
+
 ---
 
 # 7. Atomic Flag
@@ -1933,6 +1937,7 @@ Employee Bob has lunch partners: Alice Dave Christina
 Employee Christina has lunch partners: Alice Bob
 Employee Dave has lunch partners: Bob
 ```
+
 ---
 
 ## 8.7. Async Fonksiyon ve `std::future`
@@ -2100,6 +2105,7 @@ int main() {
 Yukarıdaki örnekte, `std::launch::async | std::launch::deferred` politikası kullanılarak `std::async` fonksiyonu çağrılmaktadır. Bu, hem asenkron hem de ertelenmiş yürütme için en iyi seçeneği sistem tarafından belirler.
 
 Bu politikalar, `std::async` fonksiyonunu kullanırken işlemlerin nasıl yürütüleceğini belirlememizi sağlar. Bu sayede, paralel işlemler oluşturabilir, iş parçacığı havuzlarını kullanabilir ve beklemeli işlemleri yönetebiliriz.
+
 ---
 
 # 8.6. İmplementasyonlar
