@@ -4,7 +4,7 @@ title: C++ Senkronizasyon Mekanizmaları
 date: 2023-07-16 17:44:00 +0200
 description: C++ senkronizasyon mekanizmalarının ele alınıp örneklerle incelenmesi
 lang: tr
-img: post_image_thread.png
+img: post_images/thread.png
 tags: ['C++', 'threading', 'multiprocessing', 'senkronizasyon mekanizmaları', 'mutex', 'lock_guard', 'unique_lock', 'condition_variable', 'semafor', 'binary semaphore', 'counting semaphore', 'recursive semaphore', 'deadlock', 'starvation', 'livelock', 'async fonksiyonlar', 'std::future']
 contents:
 - 'Giriş;giriş'
