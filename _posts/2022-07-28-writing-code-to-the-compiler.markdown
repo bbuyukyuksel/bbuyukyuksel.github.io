@@ -7,9 +7,16 @@ lang: en
 img: software.jpg
 tags: [C++, Templates, Compiler]
 contents: 
-- 1;Introduction;introduction'
-- 1;Starting;starting'
-- 2;Let's let the compiler write the code;...'
+- 'Introduction;introduction'
+- 'Starting;starting'
+- 'Let’s let the compiler write the code;lets-let-the-compiler-write-the-code'
+- 'print function;print-function'
+- 'First one, subtraction technique:;first-one-subtraction-technique'
+- 'Second one, comma operator technique:;second-one-comma-operator-technique'
+- 'Calculation the expression using templates;calculation-the-expression-using-templates'
+- 'Factorial;factorial'
+- 'Power;power'
+- 'Summer;summer'
 
 ---
 

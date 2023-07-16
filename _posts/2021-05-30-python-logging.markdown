@@ -7,18 +7,20 @@ lang: tr
 img: software.jpg
 tags: [Python, Logging]
 contents: 
-- 1;Standart Seviyeler;standart-seviyeler'
-- 1;Basit Konfigürasyonlar;basit-konfigürasyonlar'
-- 1;Çıktının Formatlanması;çıktının-formatlanması'
-- 1;Değişkenlerin Kullanımı;değişkenlerin-kullanımı'
-- 2;% Formatlama;-formatlama'
-- 2;F-String;f-string'
-- 2;Format Fonksiyonu;format-fonksiyonu'
-- 1;Hata Mesajlarının Yakalanması;hata-mesajlarının-yakalanması'
-- 1;Konfigürasyonlar;konfigürasyonlar'
-- 2;Kaynak Kod Tabanlı;kaynak-kod-tabanlı'
-- 2;Dosya Tabanlı;dosya-tabanlı'
-- 2;Üretim Şablonu;üretim-şablonu'
+- 'Giriş;giriş'
+- 'Standart Seviyeler;standart-seviyeler'
+- 'Basit Konfigürasyonlar;basit-konfigürasyonlar'
+- 'Çıktının Formatlanması;çıktının-formatlanması'
+- 'Değişkenlerin Kullanımı;değişkenlerin-kullanımı'
+- '% Formatlama;-formatlama'
+- 'F-String;f-string'
+- 'Format Fonksiyonu;format-fonksiyonu'
+- 'Hata Mesajlarının Yakalanması;hata-mesajlarının-yakalanması'
+- 'Konfigürasyonlar;konfigürasyonlar'
+- 'Kaynak Kod Tabanlı;kaynak-kod-tabanlı'
+- 'Dosya Tabanlı;dosya-tabanlı'
+- 'Üretim Şablonu;üretim-şablonu'
+
 ---
 
 # Giriş

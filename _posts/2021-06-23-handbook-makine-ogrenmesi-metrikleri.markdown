@@ -8,43 +8,39 @@ lang: tr
 img: makine-ogrenmesi.jpg
 tags: [Makine Öğrenmesi, Metrikler, Handbook]
 contents: 
-
-- 1;Giriş;giriş'
-- 1;Tek Sayı Değerlendirme Metriği;tek-sayı-değerlendirme-metriği'
-- 2;Confusion Matrix;confusion-matrix'
-- 3;Confusion Matrix Nasıl Hesaplanır?;confusion-matrix-nasıl-hesaplanır'
-- 3;İki Sınıflı Problemler Özeldir;i̇ki-sınıflı-problemler-özeldir'
-- 4;İki Sınıf Uygulaması;i̇ki-sınıf-uygulaması'
-- 4;Çoklu Sınıf Uygulaması;çoklu-sınıf-uygulaması'
-- 2;Classification Accuracy;classification-accuracy'
-- 3;Uygulama;uygulama'
-- 2;Precision;precision'
-- 3;İkili Sınıflandırma için Precision;i̇kili-sınıflandırma-için-precision'
-- 3;Uygulama;uygulama-1'
-- 2;Çok Sınıflı Sınıflandırma için Precision;çok-sınıflı-sınıflandırma-için-precision'
-- 3;Uygulama;uygulama-2'
-- 2;Recall;recall'
-- 2;İkili Sınıflandırma için Recall;i̇kili-sınıflandırma-için-recall'
-- 3;Uygulama;uygulama-3'
-- 3;Çok Sınıflı Sınıflandırma için Recall;çok-sınıflı-sınıflandırma-için-recall'
-- 3;Uygulama;uygulama-4'
-- 2;Dengesiz Sınıflandırma Problemlerinde Precision vs. Recall;dengesiz-sınıflandırma-problemlerinde-precision-vs-recall'
-- 2;Dengesiz Sınıflandırma Problemleri için F-Measure;dengesiz-sınıflandırma-problemleri-için-f-measure'
-- 3;Uygulama;uygulama-5'
-- 1;Geliştirme ve Test Kümesini Ayarlama;geliştirme-ve-test-kümesini-ayarlama'
-- 2;Veri Kümesini Bölme;veri-kümesini-bölme'
-- 1;Avoidable Bias;avoidable-bias'
-- 1;(avoidable) Bias ve Variance Azaltmak;avoidable-bias-ve-variance-azaltmak'
-- 1;Farklı Dağılımlardaki Veriler için Eğitim ve Test;farklı-dağılımlardaki-veriler-için-eğitim-ve-test'
-- 2;Uyumsuz Veri Dağılımları ile Bias ve Variance;uyumsuz-veri-dağılımları-ile-bias-ve-variance'
-- 1;Referans Kaynaklar;referans-kaynaklar'
-- 3;İçindekiler;'
+- 'Giriş;giriş'
+- 'Tek Sayı Değerlendirme Metriği;tek-sayı-değerlendirme-metriği'
+- 'Confusion Matrix;confusion-matrix'
+- 'Confusion Matrix Nasıl Hesaplanır?;confusion-matrix-nasıl-hesaplanır'
+- 'İki Sınıflı Problemler Özeldir;i̇ki-sınıflı-problemler-özeldir'
+- 'İki Sınıf Uygulaması;i̇ki-sınıf-uygulaması'
+- 'Çoklu Sınıf Uygulaması;çoklu-sınıf-uygulaması'
+- 'Classification Accuracy;classification-accuracy'
+- 'Uygulama;uygulama'
+- 'Precision;precision'
+- 'İkili Sınıflandırma için Precision;i̇kili-sınıflandırma-için-precision'
+- 'Uygulama;uygulama-1'
+- 'Çok Sınıflı Sınıflandırma için Precision;çok-sınıflı-sınıflandırma-için-precision'
+- 'Uygulama;uygulama-2'
+- 'Recall;recall'
+- 'İkili Sınıflandırma için Recall;i̇kili-sınıflandırma-için-recall'
+- 'Uygulama;uygulama-3'
+- 'Çok Sınıflı Sınıflandırma için Recall;çok-sınıflı-sınıflandırma-için-recall'
+- 'Uygulama;uygulama-4'
+- 'Dengesiz Sınıflandırma Problemlerinde Precision vs. Recall;dengesiz-sınıflandırma-problemlerinde-precision-vs-recall'
+- 'Dengesiz Sınıflandırma Problemleri için F-Measure;dengesiz-sınıflandırma-problemleri-için-f-measure'
+- 'Uygulama;uygulama-5'
+- 'Geliştirme ve Test Kümesini Ayarlama;geliştirme-ve-test-kümesini-ayarlama'
+- 'Veri Kümesini Bölme;veri-kümesini-bölme'
+- 'Avoidable Bias;avoidable-bias'
+- '(avoidable) Bias ve Variance Azaltmak;avoidable-bias-ve-variance-azaltmak'
+- 'Farklı Dağılımlardaki Veriler için Eğitim ve Test;farklı-dağılımlardaki-veriler-için-eğitim-ve-test'
+- 'Uyumsuz Veri Dağılımları ile Bias ve Variance;uyumsuz-veri-dağılımları-ile-bias-ve-variance'
+- 'Referans Kaynaklar;referans-kaynaklar'
 
 ---
 
 # Giriş
-
-‌
 
 Bu el kitabı bir çok kaynak ve şahsi tecrübelerimden de yararlanılarak hazırlanmıştır. Olabildiğince kısa metin içerikleri ile Makine Öğrenmesi Metrikleri ve öğrenme probleminde karşımıza çıkan öğrenememe - aşırı öğrenme (underfitting - overfitting ) konularının açıklanması hedeflenmektedir.
 
