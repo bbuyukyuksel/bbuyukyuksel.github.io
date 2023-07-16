@@ -23,9 +23,13 @@ Fork the ``master`` branch and follow the [Jekyll Installation Documentation](ht
 ```javascript
 let items = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
-for(let i=2; i<items.length; ++i){
-    console.log(`- '${items[i].textContent};${items[i].id}'`)
+let content = "";
+
+for(let i=2; i<items.length - 2; ++i){
+    content += `- '${items[i].textContent};${items[i].id}'\n`;
 }
+
+console.log(content);
 ```
 
 ## License
