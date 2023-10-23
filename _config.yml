@@ -10,14 +10,13 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Burak Büyükyüksel # add your name
 author-img: burak-buyukyuksel.jpg # add your photo
 about-author: 
-  Hoş Geldiniz,
+  Welcome to my personal page! :)
   </br>
-  Derin Öğrenme, Görüntü İşleme ve Blockchain alanlarına ilgi duyuyorum.
-  Sürekli öğrenmeye ve öğrendiklerimi paylaşmaya hevesli biriyim.
+  I carry out my projects by being interested in C, C++, Python, Rust, Go and JavaScript programming languages. In my professional life, I mostly work in embedded systems, image processing and deep learning of artificial intelligence, using C, C++ and Python programming languages.
+ </br>
   </br>
   </br>
-  </br>
-  &lt; Yazılım Geliştirme Mühendisi &gt;
+  &lt; engineer &gt;
 # add description
 #social-twitter: # add your Twitter handle
 #social-facebook: # add your Facebook handle
