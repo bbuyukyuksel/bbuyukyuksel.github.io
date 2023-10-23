@@ -7,22 +7,22 @@ lang: en
 img: post_images/exception-handling.png
 tags: ['C++ exception handling', 'try-catch blocks', 'throw statement', 'catch(...) block', 'std::exception class', 'static_assert', 'assert', 'function try-catch', 'constructor initializer list', 'error control mechanisms', 'compile-time error control', 'runtime error control', 'exceptions', 'exception types', 'handling error conditions', 'basic exception class', 'error messages', 'error reporting', 'debugging', 'safe coding', 'program errors', 'error management']
 contents:
-- 'Giriş;giriş'
-- 'C++ Exception Handling ve Hata Kontrol Mekanizmaları;c-exception-handling-ve-hata-kontrol-mekanizmaları'
-- 'C++ Exception Handling Mekanizmaları;c-exception-handling-mekanizmaları'
-- 'try-catch Blokları;try-catch-blokları'
-- 'throw İfadesi;throw-i̇fadesi'
-- 'catch(…) Bloğu;catch-bloğu'
-- 'std::exception Sınıfı;stdexception-sınıfı'
-- 'Derleme Zamanı Hata Kontrolü;derleme-zamanı-hata-kontrolü'
+- 'C++ Exception Handling Mechanisms;c-exception-handling-mechanisms'
+- 'C++ Exception Handling and Error Control Mechanisms;c-exception-handling-and-error-control-mechanisms'
+- 'C++ Exception Handling Mechanisms;c-exception-handling-mechanisms-1'
+- 'try-catch Blocks;try-catch-blocks'
+- 'throw Statement;throw-statement'
+- 'catch(…) Block;catch-block'
+- 'std::exception Class;stdexception-class'
+- 'Compile-Time Error Control;compile-time-error-control'
 - 'static_assert;static_assert'
-- 'Çalışma Zamanı Hata Kontrolü;çalışma-zamanı-hata-kontrolü'
+- 'Runtime Error Control;runtime-error-control'
 - 'assert;assert'
-- 'Kullanım Alanları;kullanım-alanları'
-- 'try-catch Blokları;try-catch-blokları-1'
+- 'Use Cases;use-cases'
+- 'try-catch Blocks;try-catch-blocks-1'
 - 'Function try-catch;function-try-catch'
-- 'Constructor Initializer List’te Exception Yakalama;constructor-initializer-listte-exception-yakalama'
-- 'Özet;özet'
+- 'Exception Handling in Constructor Initializer List;exception-handling-in-constructor-initializer-list'
+- 'Summary;summary'
 
 ---
 
