@@ -4,7 +4,7 @@ title: The Power of Concepts
 date: 2024-11-29 14:48:00 +0200
 description: "Type Constraints in C++ Templates: The Power of Concepts"
 lang: en
-img: post_images/thread.png
+img: post_images/concept.jpg
 tags:
   [
     "rust",
