@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Power of Concepts
-date: 2024-11-29 14:48:00 +0200
+date: 2024-12-07 14:48:00 +0200
 description: "Type Constraints in C++ Templates: The Power of Concepts"
 lang: en
 img: post_images/concept.jpg
@@ -17,6 +17,19 @@ tags:
     "starvation",
   ]
 contents:
+  - "Type Constraints in C++ Templates: The Power of Concepts;type-constraints-in-c-templates-the-power-of-concepts"
+  - "Before Concepts: The Old Ways;before-concepts-the-old-ways"
+  - "1. std::enable_if and SFINAE;1-stdenable_if-and-sfinae"
+  - "Example: Using std::enable_if;example-using-stdenable_if"
+  - "2. static_assert for Type Validation;2-static_assert-for-type-validation"
+  - "Example: Using static_assert;example-using-static_assert"
+  - "3. Tag Dispatching;3-tag-dispatching"
+  - "Example: Tag Dispatching;example-tag-dispatching"
+  - "4. Function Overloading;4-function-overloading"
+  - "Example: Function Overloading;example-function-overloading"
+  - "Concepts: A Modern Solution;concepts-a-modern-solution"
+  - "Using Concepts;using-concepts"
+  - "Example: A Simple Concept;example-a-simple-concept"
 ---
 
 # **Type Constraints in C++ Templates: The Power of Concepts**
